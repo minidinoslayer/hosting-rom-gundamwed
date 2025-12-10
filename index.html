@@ -1,0 +1,21 @@
+<body>
+    <div style="width: 100vw; height: 100vh; max-width:100%">
+        <div id="game" style="display: none;"></div>
+        <button id="startButton" onclick="startGame()">PLAY</button>
+    </div>
+    <script src="https://cdn.jsdelivr.net/gh/EmulatorJS/EmulatorJS/dist/emulator.min.js"></script>
+    <script>
+        document.getElementById("game").style.display = "none";
+        function startGame() {
+            document.getElementById("game").style.display = "block";
+            document.getElementById("startButton").style.display = "none";
+            EJS_player = "#game";
+            EJS_core = "snes";
+            EJS_color = "#000000";
+            EJS_startOnLoaded = true;
+            EJS_pathtodata = "https://cdn.jsdelivr.net/gh/a456pur/seraph@81f551ca0aa8e3d6018d32d8ac5904ac9bc78f76/storage/emulatorjs/data";
+            EJS_gameUrl = "https://cdn.jsdelivr.net/gh/minidinoslayer/hosting-rom-gundamwed@871a3a388446f4db4df47f5e653d2c59cb42bb17/Shin%20Kidoesenki%20Gundam%20Wing%20-%20Endless%20Duel%20(J).smc";
+            loadGame(); 
+        }
+    </script>
+</body>
